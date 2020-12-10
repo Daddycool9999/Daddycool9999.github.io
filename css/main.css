@@ -1297,7 +1297,7 @@ header .logo a {
 	color: #FF0077;
 }
 #posi{
-	top:40%
+	text-align: center;
 }
 #intro {
 	background: #151515 url(../images/intro-bg.jpg) no-repeat center bottom;
