@@ -1293,6 +1293,9 @@ header .logo a {
  *
  * ------------------------------------------------------------------- 
  */
+#self{
+	color: #FF0077;
+}
 #intro {
 	background: #151515 url(../images/intro-bg.jpg) no-repeat center bottom;
 	-webkit-background-size: cover;
