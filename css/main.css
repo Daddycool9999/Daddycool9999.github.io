@@ -2437,6 +2437,11 @@ header .logo a {
 	color: #FF0077;
 }
 
+#change{
+	margin-left: auto;
+	margin-right: auto;
+}
+
 /**
  * loader animation - (_layout.scss)
  * --------------------------------------------------------------- 
