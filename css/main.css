@@ -119,6 +119,9 @@ h1, .h01 {
 	line-height: 1.355;
 	letter-spacing: -.1rem;
 }
+h1, .col-twelve{
+	color:#E1E1E1;
+}
 @media only screen and (max-width:600px) {
 	h1, .h01 {
 		font-size: 2.6rem;
