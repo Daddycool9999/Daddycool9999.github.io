@@ -1295,10 +1295,13 @@ header .logo a {
  */
 #Self{
 	color: #FF0077;
+	font-size: large;
+	font-style: oblique;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 #posi{
 	text-align: center;
-	line-height: 50px;
+	line-height: 25px;
 }
 #intro {
 	background: #151515 url(../images/intro-bg.jpg) no-repeat center bottom;
