@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Player</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+        video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .skip-button {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            cursor: pointer;
+            z-index: 1000;
+        }
+    </style>
+</head>
+<body>
+    <video id="videoPlayer" autoplay muted>
+        <source src="images/VID-20240107-WA0001.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <div id="skipButton" class="skip-button">Skip</div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const videoPlayer = document.getElementById('videoPlayer');
+            const skipButton = document.getElementById('skipButton');
+
+            // Function to handle video end
+            function handleVideoEnd() {
+                // Open the link in the same tab
+                window.location.href = 'https://icy-cliff-0c9fa5400.4.azurestaticapps.net';
+            }
+
+            // Add event listener for video end
+            videoPlayer.addEventListener('ended', handleVideoEnd);
+
+            // Add event listener for skip button click
+            skipButton.addEventListener('click', handleVideoEnd);
+
+            // Function to unmute the video
+            function unmuteVideo() {
+                videoPlayer.muted = false;
+                // Remove the event listener to prevent multiple unmutes
+                videoPlayer.removeEventListener('click', unmuteVideo);
+            }
+
+            // Add event listener for user interaction to unmute the video
+            videoPlayer.addEventListener('click', unmuteVideo);
+        });
+    </script>
+</body>
+</html>
+
